@@ -8,7 +8,7 @@ class PaymentMethodService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final FirebaseAuth _auth = FirebaseAuth.instance;
   String _stripeSecretKey =
-      'sk_test_51R74fjRrW9QD4ume2OTuna7Uu2VI8qNYrig9O6lRx7GLn9K05kdZa3Gs53Hgxx3PFmV96Q0HECr5GX9hRmHaAL9a00sEr4kh8f';
+      'YOUR_STRIPE_SECRET_KEY'; // Replace with your Stripe secret key
 
   // Collection reference
   CollectionReference get paymentMethodsCollection =>

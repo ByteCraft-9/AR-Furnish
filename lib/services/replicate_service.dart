@@ -8,7 +8,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class ReplicateService {
   static const String baseUrl = 'https://api.replicate.com/v1';
   // API key is hardcoded, no need for user input
-  static const String apiKey = 'r8_3VonLWm8Iowkdsr1DF0wUPzUp5Dr2KP0DGl7y';
+  static const String apiKey =
+      'Your_Replicate_API_Key_Here'; // Replace with your actual API key
   static const String defaultModel =
       'stability-ai/stable-diffusion:27b93a2413e7f36cd83da926f3656280b2931564ff050bf9575f1fdf9bcd7478';
 

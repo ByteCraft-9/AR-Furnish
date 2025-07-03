@@ -10,9 +10,9 @@ class StripeService {
   static String apiBase = 'https://api.stripe.com/v1';
   static String paymentApiUrl = '${apiBase}/payment_intents';
   static String publishableKey =
-      'pk_test_51R74fjRrW9QD4umehxctrFGeMbUTJYE6vVD0EPYgFslxFBHgeQ4SdZ4yMogQORn8B8AaK0Ya9F9vGvHf761BPsxW00CSUwEBVz';
+      'Your_Publishable_Key_Here'; // Replace with your actual publishable key
   static String secretKey =
-      'sk_test_51R74fjRrW9QD4ume2OTuna7Uu2VI8qNYrig9O6lRx7GLn9K05kdZa3Gs53Hgxx3PFmV96Q0HECr5GX9hRmHaAL9a00sEr4kh8f';
+      'Your_Secret_Key_Here'; // Replace with your actual secret key
   static String merchantCountryCode = 'US';
 
   // Initialize Stripe with your publishable key
