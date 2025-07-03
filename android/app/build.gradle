@@ -1,0 +1,66 @@
+plugins {
+    id "com.android.application"
+    // START: FlutterFire Configuration
+    id 'com.google.gms.google-services' // Required for Firebase
+    // END: FlutterFire Configuration
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.ar_furnish"
+    compileSdk = 34 // Replace flutter.compileSdkVersion with a fixed value if it causes issues
+    ndkVersion = flutter.ndkVersion // Retained if required for NDK configurations
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17 // Update to Java 17 for compatibility
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17" // Updated for compatibility with Java 17
+    }
+
+    defaultConfig {
+        // Specify your unique Application ID
+        applicationId = "com.example.ar_furnish"
+        minSdk = 23 // Ensure compatibility with Firebase and other libraries
+        targetSdk = 34 // Set the desired target SDK version
+        versionCode = flutter.versionCode // Leave this as is, assuming Flutter handles it
+        versionName = flutter.versionName
+        // Add the following line for Stripe
+        multiDexEnabled = true
+    }
+
+    buildTypes {
+        release {
+            // Add your signing configuration here if needed
+            signingConfig = signingConfigs.debug
+            
+            // Add ProGuard rules
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            
+            // Minify is enabled by default for release builds
+            minifyEnabled true
+            shrinkResources true
+        }
+    }
+}
+
+dependencies {
+    // Add these lines for Stripe
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    // Needed for Android API level < 31
+    implementation "androidx.window:window:1.0.0"
+    implementation "androidx.window:window-java:1.0.0"
+}
+
+flutter {
+    source = "../.."
+}
+
+// Apply the Google Services plugin at the bottom
+apply plugin: 'com.google.gms.google-services'

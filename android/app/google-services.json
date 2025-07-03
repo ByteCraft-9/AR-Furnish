@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "426283843862",
+    "project_id": "ar-furnish-10268",
+    "storage_bucket": "ar-furnish-10268.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:426283843862:android:216023a544117c306c9037",
+        "android_client_info": {
+          "package_name": "com.example.ar_furnish"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPTyfMgZ6CI5V0aaLIBePr6M_UrUC7Qts"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
